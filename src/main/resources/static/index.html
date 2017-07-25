@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orion - Free Bootstrap Coming Soon Responsive Template</title>
+<meta name="description" content="Coming Soon Responsive Template">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<!--main-->
+<section class="main">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6"> 
+      </div>
+      <div class="col-md-6 col-sm-6"> 
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> 
+        
+        <!--welcome-message-->
+        <header class="welcome-message text-center">
+          <h1><span class="rotate">Fill the graphql query</span></h1>
+        </header>
+        <!--welcome-message end--> 
+        
+        <!--sub-form-->
+        <div class="sub-form text-center">
+          <div class="row">
+            <div class="col-md-5 center-block col-sm-8 col-xs-11">
+              <form role="form" id="mc-form" action="http://localhost:8080/demo" method="post">
+                <div class="input-group">
+                  <input type="text" id="mc-path" class="form-control" placeholder="Fill the query" required value="" name="query">
+                  <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" id="mc-subscribe" value="Subscribe" name="subscribe" >Submit<i class="fa fa-paper-plane"></i></button>
+                  </span> </div>
+                  
+              </form>	
+             
+              <p id="mc-notification"></p>
+             
+            </div>
+          </div>
+        </div>
+        <!--sub-form end--> 	
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--main end--> 
+
+<!--PRELOAD-->
+<div id="preloader">
+  
+</div>
+<!--end PRELOAD--> 
+
+ <script type="text/javascript">  
+		document.getElementById("mc-subscribe").onclick = handleButtonPress;  
+		var httpRequest;  
+		function handleButtonPress(e) {  
+			e.preventDefault();  
+			var form = document.getElementById("mc-form");  
+			var formData = "";  
+			var inputElements = document.getElementById("mc-path");  
+			formData += inputElements.name + "=" + inputElements.value + "&";  
+			
+			httpRequest = new XMLHttpRequest();  
+			httpRequest.onreadystatechange = handleRespose;  
+			httpRequest.open("POST", form.action);  
+			httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');  
+			httpRequest.send(formData);  
+		}  
+		function handleRespose(){  
+		if(httpRequest.readyState == 4 && httpRequest.status == 200){  
+			var responseText = httpRequest.responseText
+			alert(responseText);
+			//document.getElementById("result").innerHTML = responseText;  
+		}  
+		}  
+  </script>
+
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="js/jquery.backstretch.min.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script src="js/retina.min.js"></script> 
+<script src="js/tweetie.min.js"></script> 
+<script src="js/jquery.downCount.js"></script> 
+<script src="js/jquery.form.min.js"></script> 
+<script src="js/jquery.validate.min.js"></script> 
+<script src="js/jquery.simple-text-rotator.min.js"></script> 
+<script src="js/main.js"></script> 
+
+<script src="js/gmap.js"></script>
+</body>
+</html>
