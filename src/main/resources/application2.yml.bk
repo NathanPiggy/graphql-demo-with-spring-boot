@@ -1,0 +1,17 @@
+#Change the port of the server
+server:
+  port: 8080
+#Laod the mybatis properties
+mybatis:
+  mapper-locations:
+    - classpath: mapper/UserMapper.xml
+  config-location: mapper/config/mybatis-config.xml
+#Defind the alias
+  type-aliases-package: com.graphql.study.demo.bean
+#Data source
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/graphql_demo
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
