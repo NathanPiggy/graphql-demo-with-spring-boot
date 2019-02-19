@@ -1,2 +1,10 @@
 language: java
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+sudo: true
+dist: trusty
+jdk: oraclejdk9
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
+before_install: 
+  - chmod a+x ./mvnw
