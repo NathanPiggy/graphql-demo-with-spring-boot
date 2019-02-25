@@ -46,6 +46,11 @@
 		  <version>1.2.31</version>
 		</dependency>
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
 		  <groupId>org.mybatis.spring.boot</groupId>
 		  <artifactId>mybatis-spring-boot-starter</artifactId>
 		  <version>1.1.1</version>
@@ -64,6 +69,13 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.deflaker</groupId>
+				<artifactId>deflaker-maven-extension</artifactId>
+				<version>1.4</version>
+			</extension>
+		</extensions>
 	</build>
 
 

@@ -9,5 +9,12 @@ public interface UserService {
 	 * @return
 	 */
 	public User getUser(int id);
-	
+
+	/**
+	 * Get the random nulber
+	 * @return
+	 */
+	public int getRandomNumber();
+
+
 }

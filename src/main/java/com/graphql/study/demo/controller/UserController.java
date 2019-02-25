@@ -127,4 +127,10 @@ public class UserController {
         
     }
 
+	public int getRandomNumber() {
+		int randomNum = (int)(Math.random()*10);
+		System.out.println("random result:" + randomNum);
+		return randomNum;
+	}
+
 }
